@@ -41,11 +41,11 @@ class TwigsController < OpenReadController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_twig
-    @twig = current_user.twigs.find(params[:user_id])
+    @twig = current_user.twigs.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
   def twig_params
-    params.require(:twig).permit(:name, :flex, :shoots, :pattern)
+    params.require(:twig).permit(:name, :flex, :shoots, :pattern, :user_id)
   end
 end
