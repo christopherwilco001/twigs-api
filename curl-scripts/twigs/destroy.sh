@@ -1,4 +1,4 @@
-curl --include --request DELETE http://localhost:4741/twigs/${ID}
+curl --include --request DELETE http://localhost:4741/twigs/${ID} \
 --request DELETE \
 --include \
 --header 'Content-Type: application/json' \
